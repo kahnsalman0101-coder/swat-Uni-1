@@ -1,0 +1,76 @@
+/* =====================================================================
+   DegreeBadge.css — colour rules mirror the project palette spec.
+     Ph.D.                    red
+     Sc.M. / A.M. / M.Eng.    green
+     MFA                      red accent
+     MPH / MPA / MPP          green accent
+     Executive Master         ink
+     MiM / MAT / Dual         muted
+   ===================================================================== */
+
+.gp-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--gp-font-sans);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: var(--gp-radius-sm);
+  border: 1px solid transparent;
+  color: var(--gp-paper);
+}
+
+.gp-badge--sm {
+  font-size: 0.68rem;
+  padding: 0.28rem 0.5rem;
+}
+
+.gp-badge--md {
+  font-size: 0.78rem;
+  padding: 0.36rem 0.62rem;
+}
+
+.gp-badge--lg {
+  font-size: 0.92rem;
+  padding: 0.5rem 0.85rem;
+}
+
+/* --- Colour variants -------------------------------------------------- */
+
+.gp-badge--red {
+  background-color: var(--gp-red);
+  border-color: var(--gp-red);
+}
+
+.gp-badge--green {
+  background-color: var(--gp-green);
+  border-color: var(--gp-green);
+}
+
+.gp-badge--red-accent {
+  background-color: var(--gp-red-accent);
+  border-color: var(--gp-red-accent);
+}
+
+.gp-badge--green-accent {
+  background-color: var(--gp-green-accent);
+  border-color: var(--gp-green-accent);
+}
+
+.gp-badge--ink {
+  background-color: var(--gp-ink);
+  border-color: var(--gp-ink);
+}
+
+.gp-badge--muted {
+  background-color: var(--gp-muted);
+  border-color: var(--gp-muted);
+}
+
+/* Dual degrees read as a gradient between the two brand colours. */
+.gp-badge--dual {
+  background-image: linear-gradient(100deg, var(--gp-green) 48%, var(--gp-red) 52%);
+  border-color: transparent;
+}

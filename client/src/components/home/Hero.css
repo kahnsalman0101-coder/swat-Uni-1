@@ -1,0 +1,241 @@
+/* =====================================================================
+   Hero.css — off-white field, serif name and motto, CSS-only crest.
+   ===================================================================== */
+
+.gp-hero {
+  background-color: var(--gp-off-white);
+  padding-block: 3.25rem 3.75rem;
+}
+
+.gp-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: 3rem;
+}
+
+/* --- Copy ------------------------------------------------------------- */
+
+.gp-hero__title {
+  max-width: 22ch;
+  margin-bottom: 0.85rem;
+}
+
+.gp-hero__motto {
+  margin: 0 0 1.4rem;
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--gp-red);
+  font-family: var(--gp-font-serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--gp-green);
+}
+
+.gp-hero__lede {
+  color: var(--gp-muted);
+  font-size: 1.08rem;
+  max-width: 60ch;
+  margin-bottom: 1.9rem;
+}
+
+/* --- Search ----------------------------------------------------------- */
+
+.gp-hero__search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 620px;
+  padding: 0.45rem 0.45rem 0.45rem 2.9rem;
+  background-color: var(--gp-paper);
+  border: 1px solid var(--gp-border);
+  border-radius: var(--gp-radius-lg);
+  box-shadow: var(--gp-shadow);
+}
+
+.gp-hero__search:focus-within {
+  border-color: var(--gp-red);
+  box-shadow: var(--gp-ring);
+}
+
+.gp-hero__search-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--gp-muted);
+  font-size: 1.05rem;
+  pointer-events: none;
+}
+
+.gp-hero__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--gp-ink);
+  font-size: 1rem;
+  padding: 0.65rem 0.25rem;
+}
+
+.gp-hero__input:focus {
+  outline: none;
+}
+
+.gp-hero__input::placeholder {
+  color: var(--gp-muted);
+}
+
+.gp-hero__submit {
+  flex: 0 0 auto;
+}
+
+/* --- Notices ---------------------------------------------------------- */
+
+.gp-hero__notices {
+  margin-top: 1.6rem;
+}
+
+.gp-hero__notices-label {
+  margin: 0 0 0.5rem;
+  font-size: var(--gp-fs-micro);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gp-muted);
+}
+
+.gp-hero__notices-list {
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gp-hero__notice-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: var(--gp-green);
+  font-size: var(--gp-fs-small);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.gp-hero__notice-link i {
+  margin-top: 0.15rem;
+  color: var(--gp-red);
+}
+
+.gp-hero__notice-link:hover {
+  color: var(--gp-red);
+}
+
+/* --- CSS-only crest --------------------------------------------------- */
+
+.gp-hero__media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 340px;
+  padding: 2rem;
+  overflow: hidden;
+  border-radius: var(--gp-radius-lg);
+  border: 1px solid var(--gp-border);
+  background-color: var(--gp-green);
+  background-image: linear-gradient(
+    135deg,
+    var(--gp-green-dark) 0%,
+    var(--gp-green) 55%,
+    var(--gp-green-accent) 100%
+  );
+  box-shadow: var(--gp-shadow-lg);
+}
+
+/* Thin repeating rules — a printed-flag texture, no image asset. */
+.gp-hero__media::before {
+  content: "";
+  position: absolute;
+  inset: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--gp-paper) 32%, transparent);
+  border-radius: var(--gp-radius);
+  background-image: repeating-linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--gp-paper) 8%, transparent) 0,
+    color-mix(in srgb, var(--gp-paper) 8%, transparent) 1px,
+    transparent 1px,
+    transparent 14px
+  );
+}
+
+.gp-hero__crest {
+  position: relative;
+  display: grid;
+  place-items: center;
+  gap: 0.35rem;
+  width: min(210px, 62%);
+  aspect-ratio: 3 / 4;
+  background-color: var(--gp-green-dark);
+  border: 3px solid var(--gp-paper);
+  border-radius: 50% 50% 46% 46% / 20% 20% 80% 80%;
+  box-shadow: var(--gp-shadow-lg);
+  text-align: center;
+}
+
+.gp-hero__crest-initials {
+  font-family: var(--gp-font-serif);
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--gp-paper);
+}
+
+.gp-hero__crest-rule {
+  width: 46px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--gp-red);
+}
+
+.gp-hero__crest-year {
+  font-size: var(--gp-fs-micro);
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  color: color-mix(in srgb, var(--gp-paper) 78%, transparent);
+}
+
+/* --- Responsive ------------------------------------------------------- */
+
+@media (max-width: 991.98px) {
+  .gp-hero__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  .gp-hero__media {
+    min-height: 240px;
+    order: -1;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .gp-hero__search {
+    flex-wrap: wrap;
+    padding: 0.6rem;
+  }
+
+  .gp-hero__search-icon {
+    display: none;
+  }
+
+  .gp-hero__input {
+    flex: 1 1 100%;
+    padding: 0.5rem 0.6rem;
+    border-bottom: 1px solid var(--gp-border);
+  }
+
+  .gp-hero__submit {
+    flex: 1 1 100%;
+    margin-top: 0.6rem;
+  }
+}

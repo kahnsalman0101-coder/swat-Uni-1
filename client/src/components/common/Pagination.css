@@ -1,0 +1,62 @@
+/* Pagination.css */
+
+.gp-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+}
+
+.gp-pagination__pages {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gp-pagination__page,
+.gp-pagination__step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-width: 40px;
+  height: 40px;
+  padding-inline: 0.7rem;
+  background-color: var(--gp-paper);
+  border: 1px solid var(--gp-border);
+  border-radius: var(--gp-radius);
+  color: var(--gp-ink);
+  font-size: var(--gp-fs-small);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.gp-pagination__page:hover,
+.gp-pagination__step:hover:not(:disabled) {
+  border-color: var(--gp-green-accent);
+  background-color: var(--gp-green-light);
+  color: var(--gp-green);
+}
+
+.gp-pagination__page.is-current {
+  background-color: var(--gp-red);
+  border-color: var(--gp-red);
+  color: var(--gp-paper);
+}
+
+.gp-pagination__step:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.gp-pagination__gap {
+  color: var(--gp-muted);
+  padding-inline: 0.2rem;
+}

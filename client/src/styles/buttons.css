@@ -1,0 +1,108 @@
+/* =====================================================================
+   buttons.css — the only two button treatments in the system.
+   Primary action = red. Secondary action = green outline.
+   ===================================================================== */
+
+.gp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--gp-font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--gp-radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.16s ease, color 0.16s ease,
+    border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+}
+
+.gp-btn:hover {
+  text-decoration: none;
+}
+
+.gp-btn:disabled,
+.gp-btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* --- Primary: RED ----------------------------------------------------- */
+
+.gp-btn--red {
+  background-color: var(--gp-red);
+  border-color: var(--gp-red);
+  color: var(--gp-paper);
+}
+
+.gp-btn--red:hover,
+.gp-btn--red:focus-visible {
+  background-color: var(--gp-red-accent);
+  border-color: var(--gp-red-accent);
+  color: var(--gp-paper);
+  box-shadow: 0 8px 20px rgba(198, 40, 40, 0.28);
+}
+
+/* --- Secondary: GREEN outline ---------------------------------------- */
+
+.gp-btn--green {
+  background-color: transparent;
+  border-color: var(--gp-green);
+  color: var(--gp-green);
+}
+
+.gp-btn--green:hover,
+.gp-btn--green:focus-visible {
+  background-color: var(--gp-green-accent);
+  border-color: var(--gp-green-accent);
+  color: var(--gp-paper);
+}
+
+/* --- Solid green (footer / dark surfaces) ---------------------------- */
+
+.gp-btn--green-solid {
+  background-color: var(--gp-green);
+  border-color: var(--gp-green);
+  color: var(--gp-paper);
+}
+
+.gp-btn--green-solid:hover,
+.gp-btn--green-solid:focus-visible {
+  background-color: var(--gp-green-accent);
+  border-color: var(--gp-green-accent);
+  color: var(--gp-paper);
+}
+
+/* --- Quiet link-style button ----------------------------------------- */
+
+.gp-btn--ghost {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--gp-green);
+  padding-inline: 0.5rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.gp-btn--ghost:hover {
+  color: var(--gp-red);
+}
+
+.gp-btn--sm {
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+}
+
+.gp-btn--lg {
+  font-size: 1.02rem;
+  padding: 0.85rem 1.9rem;
+}
+
+.gp-btn--block {
+  width: 100%;
+}

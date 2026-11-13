@@ -1,0 +1,43 @@
+/* EmptyState.css */
+
+.gp-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  padding: 3.5rem 1.5rem;
+  background-color: var(--gp-paper);
+  border: 1px dashed var(--gp-border);
+  border-radius: var(--gp-radius-lg);
+}
+
+.gp-empty__icon {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: var(--gp-green-light);
+  color: var(--gp-green);
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.gp-empty__title {
+  margin: 0;
+}
+
+.gp-empty__message {
+  margin: 0;
+  color: var(--gp-muted);
+  max-width: 46ch;
+}
+
+.gp-empty__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+}

@@ -1,0 +1,182 @@
+/* =====================================================================
+   FilterSidebar.css — sticky facet rail. Green header, red accents for the
+   active-filter count and the clear control.
+   ===================================================================== */
+
+.gp-sidebar {
+  background-color: var(--gp-paper);
+  border: 1px solid var(--gp-border);
+  border-radius: var(--gp-radius-lg);
+  overflow: hidden;
+}
+
+.gp-sidebar__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1.1rem 1.25rem;
+  background-color: var(--gp-green);
+  border-bottom: 3px solid var(--gp-red);
+}
+
+.gp-sidebar__title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+  font-family: var(--gp-font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gp-paper);
+}
+
+.gp-sidebar__badge {
+  display: inline-grid;
+  place-items: center;
+  min-width: 22px;
+  height: 22px;
+  padding-inline: 0.35rem;
+  border-radius: 999px;
+  background-color: var(--gp-red);
+  color: var(--gp-paper);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.gp-sidebar__clear {
+  flex: 0 0 auto;
+  border: 1px solid var(--gp-paper);
+  border-radius: var(--gp-radius-sm);
+  background: transparent;
+  color: var(--gp-paper);
+  font-family: var(--gp-font-sans);
+  font-size: var(--gp-fs-micro);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.32rem 0.6rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.gp-sidebar__clear:hover {
+  background-color: var(--gp-paper);
+  color: var(--gp-green);
+}
+
+.gp-sidebar__body {
+  max-height: min(66vh, 760px);
+  overflow-y: auto;
+  padding: 0.5rem 1.25rem 1.25rem;
+}
+
+/* --- Groups ----------------------------------------------------------- */
+
+.gp-filter-group {
+  border: 0;
+  margin: 0;
+  padding: 1.1rem 0 0;
+}
+
+.gp-filter-group + .gp-filter-group {
+  border-top: 1px solid var(--gp-border);
+}
+
+.gp-filter-group__legend {
+  float: none;
+  width: auto;
+  margin-bottom: 0.7rem;
+  padding: 0;
+  color: var(--gp-ink);
+  font-family: var(--gp-font-sans);
+  font-size: var(--gp-fs-micro);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.gp-filter-group__options {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.gp-filter-group__options--scroll {
+  max-height: 240px;
+  overflow-y: auto;
+  padding-right: 0.35rem;
+}
+
+/* --- Options ---------------------------------------------------------- */
+
+.gp-filter-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  padding-block: 0.24rem;
+}
+
+.gp-filter-option__box {
+  flex: 0 0 auto;
+  margin: 0.22rem 0 0;
+  border-color: var(--gp-muted);
+  cursor: pointer;
+}
+
+.gp-filter-option__box:checked {
+  background-color: var(--gp-green);
+  border-color: var(--gp-green);
+}
+
+/* Bootstrap's default control focus is blue; keep the identity red instead. */
+.gp-filter-option__box:focus {
+  border-color: var(--gp-red);
+  box-shadow: var(--gp-ring);
+}
+
+.gp-filter-option__box:checked:focus {
+  border-color: var(--gp-red);
+  box-shadow: var(--gp-ring);
+}
+
+.gp-filter-option__label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 1 1 auto;
+  margin: 0;
+  color: var(--gp-ink);
+  font-size: var(--gp-fs-small);
+  line-height: 1.45;
+  cursor: pointer;
+}
+
+.gp-filter-option__text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.gp-filter-option__count {
+  flex: 0 0 auto;
+  color: var(--gp-muted);
+  font-size: var(--gp-fs-micro);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Desktop stickiness ----------------------------------------------- */
+
+@media (min-width: 992px) {
+  .gp-sidebar {
+    position: sticky;
+    top: calc(var(--gp-header-h) + 1.25rem);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .gp-sidebar__body {
+    max-height: none;
+  }
+}

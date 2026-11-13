@@ -1,0 +1,45 @@
+/* HomePage.css — page-level rhythm for the home sections. */
+
+/* Long-form excerpts (Vice Chancellor, About) sit on a comfortable measure. */
+.gp-home__page {
+  max-width: 900px;
+}
+
+.gp-home__page-body {
+  margin-top: 0.25rem;
+}
+
+.gp-home__page-text {
+  max-width: 72ch;
+  color: var(--gp-ink);
+  font-size: 1.08rem;
+  line-height: var(--gp-lh-body);
+}
+
+.gp-home__attribution {
+  margin: 0 0 1.25rem;
+  font-family: var(--gp-font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gp-green);
+}
+
+.gp-home__page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.gp-home__source {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--gp-fs-small);
+  font-weight: 600;
+  color: var(--gp-muted);
+}
+
+.gp-home__source:hover {
+  color: var(--gp-green);
+}

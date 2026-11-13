@@ -1,0 +1,43 @@
+/* NotFoundPage.css */
+
+.gp-notfound {
+  display: grid;
+  place-items: center;
+  min-height: 60vh;
+  padding-block: 4rem;
+}
+
+.gp-notfound__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gp-notfound__code {
+  margin: 0;
+  font-family: var(--gp-font-serif);
+  font-size: clamp(4rem, 3rem + 6vw, 7rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--gp-green);
+  border-bottom: 4px solid var(--gp-red);
+  padding-bottom: 0.4rem;
+}
+
+.gp-notfound__title {
+  margin: 1.75rem 0 0.9rem;
+}
+
+.gp-notfound__text {
+  margin: 0 0 2rem;
+  max-width: 48ch;
+  color: var(--gp-muted);
+}
+
+.gp-notfound__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+}

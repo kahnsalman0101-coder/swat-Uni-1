@@ -1,0 +1,29 @@
+/* ErrorState.css */
+
+.gp-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.65rem;
+  padding: 3rem 1.5rem;
+  background-color: var(--gp-red-light);
+  border: 1px solid rgba(198, 40, 40, 0.28);
+  border-left: 4px solid var(--gp-red);
+  border-radius: var(--gp-radius-lg);
+}
+
+.gp-error__icon {
+  color: var(--gp-red);
+  font-size: 1.9rem;
+}
+
+.gp-error__title {
+  margin: 0;
+}
+
+.gp-error__message {
+  margin: 0 0 0.6rem;
+  color: var(--gp-ink);
+  max-width: 52ch;
+}

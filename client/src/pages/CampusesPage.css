@@ -1,0 +1,85 @@
+/* CampusesPage.css */
+
+.gp-campuses {
+  padding-bottom: 4.5rem;
+}
+
+.gp-campuses__head {
+  max-width: 70ch;
+  padding-block: 1.5rem 2rem;
+}
+
+.gp-campuses__title {
+  margin-bottom: 1rem;
+}
+
+.gp-campuses__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.gp-campus {
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem;
+  background-color: var(--gp-paper);
+  border: 1px solid var(--gp-border);
+  border-top: 4px solid var(--gp-green);
+  border-radius: var(--gp-radius-lg);
+  box-shadow: var(--gp-shadow-sm);
+}
+
+.gp-campus__name {
+  margin: 0 0 0.75rem;
+}
+
+.gp-campus__location {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin: 0 0 1rem;
+  color: var(--gp-green);
+  font-size: var(--gp-fs-small);
+  font-weight: 600;
+}
+
+.gp-campus__overview {
+  margin: 0 0 1.25rem;
+  color: var(--gp-muted);
+  font-size: var(--gp-fs-small);
+}
+
+.gp-campus__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.gp-campus__stats li {
+  padding: 0.3rem 0.7rem;
+  background-color: var(--gp-green-light);
+  border-radius: 999px;
+  color: var(--gp-green);
+  font-size: var(--gp-fs-micro);
+  font-weight: 700;
+}
+
+.gp-campus__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1.25rem;
+  margin-top: auto;
+}
+
+.gp-campus__external {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--gp-fs-small);
+  font-weight: 600;
+}

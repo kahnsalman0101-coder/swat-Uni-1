@@ -1,0 +1,32 @@
+/* ProgramGrid.css — responsive grid of programme cards. */
+
+.gp-program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: opacity 0.18s ease;
+}
+
+.gp-program-grid__item {
+  display: flex;
+}
+
+.gp-program-grid__item > * {
+  width: 100%;
+}
+
+/* While a follow-up request is in flight, keep the current page visible but
+   visually de-emphasised instead of blanking the grid. */
+.gp-program-grid[aria-busy="true"] {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+@media (min-width: 1200px) {
+  .gp-program-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

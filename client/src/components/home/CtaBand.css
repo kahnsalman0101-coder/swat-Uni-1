@@ -1,0 +1,64 @@
+/* CtaBand.css — green panel with red and outlined-green actions. */
+
+.gp-cta {
+  padding-block: 1rem 4rem;
+}
+
+.gp-cta__panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2.75rem clamp(1.5rem, 3vw, 3rem);
+  background-color: var(--gp-green);
+  border-radius: var(--gp-radius-lg);
+  box-shadow: var(--gp-shadow-lg);
+  background-image: linear-gradient(
+    120deg,
+    var(--gp-green-dark) 0%,
+    var(--gp-green) 55%,
+    var(--gp-green-accent) 100%
+  );
+}
+
+.gp-cta__text {
+  max-width: 56ch;
+}
+
+.gp-cta__eyebrow {
+  margin: 0 0 0.6rem;
+  color: color-mix(in srgb, var(--gp-paper) 72%, transparent);
+  font-size: var(--gp-fs-micro);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.gp-cta__title {
+  color: var(--gp-paper);
+  margin-bottom: 0.75rem;
+}
+
+.gp-cta__lede {
+  margin: 0;
+  color: color-mix(in srgb, var(--gp-paper) 86%, transparent);
+}
+
+.gp-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+/* On the dark panel the outlined button needs a light border to stay legible. */
+.gp-cta__actions .gp-btn--green {
+  border-color: color-mix(in srgb, var(--gp-paper) 70%, transparent);
+  color: var(--gp-paper);
+}
+
+.gp-cta__actions .gp-btn--green:hover {
+  background-color: var(--gp-paper);
+  border-color: var(--gp-paper);
+  color: var(--gp-green);
+}

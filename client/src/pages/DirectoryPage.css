@@ -1,0 +1,68 @@
+/* =====================================================================
+   DirectoryPage.css — programme directory: page head, search + admissions
+   action, and the facet-rail / result-column layout.
+   ===================================================================== */
+
+.gp-directory {
+  padding-bottom: 4.5rem;
+}
+
+.gp-directory__head {
+  padding-block: 1.5rem 1.75rem;
+}
+
+.gp-directory__title {
+  max-width: 24ch;
+  margin-bottom: 1rem;
+}
+
+/* --- Search + admissions action -------------------------------------- */
+
+.gp-directory__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.gp-directory__search {
+  flex: 1 1 320px;
+  max-width: 560px;
+}
+
+.gp-directory__admissions {
+  flex: 0 0 auto;
+}
+
+/* --- Facet rail + results -------------------------------------------- */
+
+.gp-directory__layout {
+  display: grid;
+  grid-template-columns: 288px minmax(0, 1fr);
+  gap: 1.75rem;
+  align-items: start;
+  margin-top: 0.5rem;
+}
+
+.gp-directory__results {
+  min-width: 0;
+}
+
+@media (max-width: 991.98px) {
+  .gp-directory__layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .gp-directory__search {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+
+  .gp-directory__admissions {
+    width: 100%;
+  }
+}

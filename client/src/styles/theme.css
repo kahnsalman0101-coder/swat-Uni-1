@@ -1,0 +1,60 @@
+/* =====================================================================
+   theme.css — single source of truth for the Green + Red identity.
+   Every other stylesheet consumes these tokens; never hard-code a hex
+   value in a component stylesheet.
+   ===================================================================== */
+
+:root {
+  /* --- Brand colours -------------------------------------------------- */
+  --gp-green: #1b5e20; /* deep forest green — structure, header, footer  */
+  --gp-green-accent: #2e7d32; /* hover states, links, tag pills            */
+  --gp-green-light: #e8f5e9; /* card hover wash, stat bands, section tint  */
+  --gp-green-dark: #0f3d14; /* footer bottom strip                        */
+
+  --gp-red: #c62828; /* CTAs, active states, Ph.D. badge                 */
+  --gp-red-accent: #e53935; /* hover on red buttons, focus outlines       */
+  --gp-red-light: #fdecea; /* alert / notice wash                        */
+
+  --gp-ink: #1a1a1a;
+  --gp-paper: #ffffff;
+  --gp-off-white: #f7f7f5;
+  --gp-border: #e5e5e5;
+  --gp-muted: #6b6b6b;
+  --gp-tag-bg: #f0efed;
+
+  /* --- Typography ----------------------------------------------------- */
+  --gp-font-serif: "Iowan Old Style", "Palatino Linotype", Palatino,
+    "Book Antiqua", "Times New Roman", Georgia, serif;
+  --gp-font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+
+  --gp-fs-display: clamp(2.1rem, 1.55rem + 2.4vw, 3.55rem);
+  --gp-fs-h2: clamp(1.6rem, 1.32rem + 1.1vw, 2.15rem);
+  --gp-fs-h3: 1.3rem;
+  --gp-fs-body: 1rem;
+  --gp-fs-small: 0.875rem;
+  --gp-fs-micro: 0.78rem;
+
+  --gp-lh-tight: 1.16;
+  --gp-lh-body: 1.65;
+
+  /* --- Space / shape -------------------------------------------------- */
+  --gp-radius-sm: 4px;
+  --gp-radius: 8px;
+  --gp-radius-lg: 14px;
+  --gp-shadow-sm: 0 1px 2px rgba(26, 26, 26, 0.06);
+  --gp-shadow: 0 6px 18px rgba(26, 26, 26, 0.08);
+  --gp-shadow-lg: 0 16px 38px rgba(26, 26, 26, 0.12);
+  --gp-ring: 0 0 0 3px rgba(198, 40, 40, 0.22);
+
+  --gp-container: 1200px;
+  --gp-header-h: 76px;
+
+  /* Bootstrap overrides so form controls and links inherit the identity. */
+  --bs-body-color: var(--gp-ink);
+  --bs-body-bg: var(--gp-off-white);
+  --bs-border-color: var(--gp-border);
+  --bs-link-color: var(--gp-green-accent);
+  --bs-link-hover-color: var(--gp-green);
+  --bs-font-sans-serif: var(--gp-font-sans);
+}

@@ -1,0 +1,213 @@
+/* ContentListPage.css */
+
+.gp-content {
+  padding-bottom: 4.5rem;
+}
+
+.gp-content__head {
+  padding-block: 1.5rem 1.75rem;
+}
+
+.gp-content__title {
+  max-width: 26ch;
+  margin-bottom: 1rem;
+}
+
+/* --- Section tabs ------------------------------------------------------ */
+
+.gp-content__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gp-border);
+}
+
+.gp-content__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--gp-border);
+  border-radius: var(--gp-radius);
+  background-color: var(--gp-paper);
+  color: var(--gp-ink);
+  font-size: var(--gp-fs-small);
+  font-weight: 600;
+}
+
+.gp-content__tab:hover {
+  border-color: var(--gp-green-accent);
+  color: var(--gp-green);
+  text-decoration: none;
+}
+
+.gp-content__tab.is-active {
+  background-color: var(--gp-green);
+  border-color: var(--gp-green);
+  color: var(--gp-paper);
+}
+
+.gp-content__tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.6rem;
+  padding: 0 0.4rem;
+  border-radius: 999px;
+  background-color: var(--gp-tag-bg);
+  color: var(--gp-muted);
+  font-size: var(--gp-fs-micro);
+  font-weight: 700;
+}
+
+.gp-content__tab.is-active .gp-content__tab-count {
+  background-color: var(--gp-paper);
+  color: var(--gp-green);
+}
+
+/* --- Search ------------------------------------------------------------ */
+
+.gp-content__search {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 640px;
+  margin-top: 1.5rem;
+}
+
+.gp-content__search-field {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.9rem;
+  background-color: var(--gp-paper);
+  border: 1px solid var(--gp-border);
+  border-radius: var(--gp-radius);
+}
+
+.gp-content__search-field:focus-within {
+  border-color: var(--gp-green-accent);
+  box-shadow: var(--gp-ring);
+}
+
+.gp-content__search-field i {
+  color: var(--gp-muted);
+}
+
+.gp-content__search-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--gp-ink);
+  font: inherit;
+}
+
+.gp-content__search-input:focus {
+  outline: none;
+}
+
+/* --- Result summary ---------------------------------------------------- */
+
+.gp-content__summary {
+  margin: 1.5rem 0 0.5rem;
+  color: var(--gp-muted);
+  font-size: var(--gp-fs-small);
+}
+
+/* --- Item list --------------------------------------------------------- */
+
+.gp-content__list {
+  display: grid;
+  gap: 1.25rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gp-content__item {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background-color: var(--gp-paper);
+  border: 1px solid var(--gp-border);
+  border-left: 4px solid var(--gp-green);
+  border-radius: var(--gp-radius-lg);
+  box-shadow: var(--gp-shadow-sm);
+}
+
+.gp-content__thumb {
+  flex: 0 0 160px;
+  overflow: hidden;
+  border-radius: var(--gp-radius);
+  background-color: var(--gp-tag-bg);
+}
+
+.gp-content__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gp-content__body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.gp-content__date {
+  margin: 0 0 0.4rem;
+  color: var(--gp-muted);
+  font-size: var(--gp-fs-micro);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.gp-content__item-title {
+  max-width: 62ch;
+  margin: 0 0 0.6rem;
+  font-size: 1.25rem;
+}
+
+.gp-content__item-title a {
+  color: var(--gp-ink);
+}
+
+.gp-content__item-title a:hover {
+  color: var(--gp-red);
+}
+
+.gp-content__excerpt {
+  max-width: 72ch;
+  margin: 0 0 0.9rem;
+  color: var(--gp-muted);
+  font-size: var(--gp-fs-small);
+}
+
+.gp-content__source {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--gp-red);
+  font-size: var(--gp-fs-small);
+  font-weight: 600;
+}
+
+.gp-content__source:hover {
+  color: var(--gp-red-accent);
+}
+
+@media (max-width: 575.98px) {
+  .gp-content__item {
+    flex-direction: column;
+  }
+
+  .gp-content__thumb {
+    flex-basis: auto;
+    height: 180px;
+  }
+}

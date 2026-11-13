@@ -1,0 +1,117 @@
+/* =====================================================================
+   LoadingState.css — spinner + content skeletons.
+   ===================================================================== */
+
+.gp-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  padding-block: 4rem;
+  text-align: center;
+}
+
+.gp-loading--compact {
+  flex-direction: row;
+  padding-block: 1.5rem;
+}
+
+.gp-loading__spinner {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 3px solid var(--gp-green-light);
+  border-top-color: var(--gp-red);
+  animation: gp-spin 0.8s linear infinite;
+}
+
+.gp-loading__message {
+  margin: 0;
+  color: var(--gp-muted);
+  font-size: var(--gp-fs-small);
+}
+
+@keyframes gp-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- Skeletons --------------------------------------------------------- */
+
+.gp-skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.gp-skeleton-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.4rem;
+  background-color: var(--gp-paper);
+  border: 1px solid var(--gp-border);
+  border-radius: var(--gp-radius-lg);
+}
+
+.gp-skeleton-card__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.gp-skeleton {
+  display: block;
+  border-radius: var(--gp-radius-sm);
+  background-image: linear-gradient(
+    90deg,
+    var(--gp-tag-bg) 25%,
+    #e6e5e2 37%,
+    var(--gp-tag-bg) 63%
+  );
+  background-size: 400% 100%;
+  animation: gp-shimmer 1.4s ease infinite;
+}
+
+.gp-skeleton--badge {
+  width: 74px;
+  height: 22px;
+}
+
+.gp-skeleton--pill {
+  width: 58px;
+  height: 18px;
+  border-radius: 999px;
+}
+
+.gp-skeleton--title {
+  width: 78%;
+  height: 24px;
+}
+
+.gp-skeleton--line {
+  width: 100%;
+  height: 12px;
+}
+
+.gp-skeleton--short {
+  width: 55%;
+}
+
+@keyframes gp-shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gp-loading__spinner,
+  .gp-skeleton {
+    animation: none;
+  }
+}

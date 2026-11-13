@@ -1,0 +1,70 @@
+/* SearchBar.css — controlled search field with a clear (×) action. */
+
+.gp-searchbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.45rem 0.45rem 2.75rem;
+  background-color: var(--gp-paper);
+  border: 1px solid var(--gp-border);
+  border-radius: var(--gp-radius-lg);
+  box-shadow: var(--gp-shadow-sm);
+}
+
+.gp-searchbar:focus-within {
+  border-color: var(--gp-red);
+  box-shadow: var(--gp-ring);
+}
+
+.gp-searchbar__icon {
+  position: absolute;
+  left: 0.95rem;
+  color: var(--gp-muted);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.gp-searchbar__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--gp-ink);
+  font-size: 1rem;
+  padding: 0.62rem 0.25rem;
+}
+
+.gp-searchbar__input:focus {
+  outline: none;
+}
+
+.gp-searchbar__input::placeholder {
+  color: var(--gp-muted);
+}
+
+.gp-searchbar__clear {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--gp-tag-bg);
+  color: var(--gp-muted);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.gp-searchbar__clear:hover {
+  background-color: var(--gp-red-light);
+  color: var(--gp-red);
+}
+
+@media (max-width: 575.98px) {
+  .gp-searchbar {
+    padding: 0.6rem 0.6rem 0.6rem 2.75rem;
+  }
+}

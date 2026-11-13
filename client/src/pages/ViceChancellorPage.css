@@ -1,0 +1,44 @@
+/* ViceChancellorPage.css */
+
+.gp-vc {
+  padding-bottom: 4.5rem;
+}
+
+.gp-vc__article {
+  padding-block: 1.5rem 3rem;
+}
+
+.gp-vc__head {
+  max-width: 68ch;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--gp-border);
+}
+
+.gp-vc__title {
+  margin-bottom: 0.85rem;
+}
+
+.gp-vc__standfirst {
+  margin: 0;
+  color: var(--gp-green);
+  font-family: var(--gp-font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.gp-vc__prose {
+  max-width: 68ch;
+  margin-top: 2rem;
+  font-size: 1.06rem;
+}
+
+.gp-vc__prose p {
+  margin: 0 0 1.25rem;
+}
+
+.gp-vc__foot {
+  max-width: 68ch;
+  margin-top: 2.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gp-border);
+}

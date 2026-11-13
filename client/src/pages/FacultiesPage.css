@@ -1,0 +1,136 @@
+/* FacultiesPage.css */
+
+.gp-faculties {
+  padding-bottom: 4.5rem;
+}
+
+.gp-faculties__head {
+  max-width: 70ch;
+  padding-block: 1.5rem 2rem;
+}
+
+.gp-faculties__title {
+  max-width: 26ch;
+  margin-bottom: 1rem;
+}
+
+.gp-faculties__list {
+  display: grid;
+  gap: 1.75rem;
+}
+
+/* --- One faculty block ------------------------------------------------- */
+
+.gp-faculty {
+  padding: 1.75rem;
+  background-color: var(--gp-paper);
+  border: 1px solid var(--gp-border);
+  border-top: 4px solid var(--gp-green);
+  border-radius: var(--gp-radius-lg);
+  box-shadow: var(--gp-shadow-sm);
+}
+
+.gp-faculty__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--gp-border);
+}
+
+.gp-faculty__name {
+  margin: 0 0 0.4rem;
+}
+
+.gp-faculty__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin: 0;
+  color: var(--gp-muted);
+  font-size: var(--gp-fs-small);
+}
+
+.gp-faculty__short {
+  font-weight: 600;
+  color: var(--gp-green);
+}
+
+/* --- Departments ------------------------------------------------------- */
+
+.gp-faculty__departments {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gp-department {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-block: 1.1rem;
+  border-bottom: 1px solid var(--gp-border);
+}
+
+.gp-department:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.gp-department__text {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.gp-department__name {
+  margin: 0 0 0.35rem;
+  font-size: 1.08rem;
+}
+
+.gp-department__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  margin: 0;
+  color: var(--gp-muted);
+  font-size: var(--gp-fs-small);
+}
+
+.gp-department__campus {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.gp-department__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  font-size: var(--gp-fs-small);
+  font-weight: 600;
+}
+
+.gp-department__actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.gp-faculty__empty {
+  margin: 1.25rem 0 0;
+  color: var(--gp-muted);
+  font-size: var(--gp-fs-small);
+}
+
+@media (max-width: 575.98px) {
+  .gp-faculty {
+    padding: 1.25rem;
+  }
+}

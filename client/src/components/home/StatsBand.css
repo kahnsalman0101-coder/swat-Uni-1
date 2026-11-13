@@ -1,0 +1,56 @@
+/* StatsBand.css — light green stat band with a red hairline rule. */
+
+.gp-stats {
+  background-color: var(--gp-green-light);
+  border-top: 1px solid color-mix(in srgb, var(--gp-green) 16%, transparent);
+  border-bottom: 3px solid var(--gp-red);
+  padding-block: 2.25rem;
+}
+
+.gp-stats__list {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gp-stats__item {
+  position: relative;
+  padding-left: 1.25rem;
+  border-left: 2px solid color-mix(in srgb, var(--gp-green) 22%, transparent);
+}
+
+.gp-stats__item:first-child {
+  border-left-color: var(--gp-red);
+}
+
+.gp-stats__value {
+  margin: 0;
+  font-family: var(--gp-font-serif);
+  font-size: clamp(1.6rem, 1.25rem + 1.1vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--gp-green);
+}
+
+.gp-stats__label {
+  margin: 0.45rem 0 0;
+  color: var(--gp-ink);
+  font-size: var(--gp-fs-small);
+  font-weight: 600;
+}
+
+@media (max-width: 991.98px) {
+  .gp-stats__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .gp-stats__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+}

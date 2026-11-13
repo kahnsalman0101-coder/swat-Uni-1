@@ -1,0 +1,42 @@
+/* SectionHeading.css */
+
+.gp-section-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 1.9rem;
+}
+
+.gp-section-heading__text {
+  max-width: 66ch;
+}
+
+.gp-section-heading__title {
+  margin: 0;
+}
+
+.gp-section-heading__lede {
+  margin: 0.8rem 0 0;
+}
+
+.gp-section-heading--center {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gp-section-heading--center .gp-section-heading__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gp-section-heading--center .gp-eyebrow {
+  justify-content: center;
+}
+
+.gp-section-heading--center .gp-section-heading__lede {
+  margin-inline: auto;
+}

@@ -1,0 +1,104 @@
+/* =====================================================================
+   AboutPage.css — the university's own "About" text plus the published
+   headline counters, laid out as a readable article.
+   ===================================================================== */
+
+.gp-about {
+  padding-bottom: 4.5rem;
+}
+
+.gp-about__article {
+  padding-block: 1.5rem 3rem;
+}
+
+.gp-about__head {
+  max-width: 68ch;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--gp-border);
+}
+
+.gp-about__title {
+  margin-bottom: 0.85rem;
+}
+
+.gp-about__standfirst {
+  margin: 0;
+  color: var(--gp-green);
+  font-family: var(--gp-font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+/* --- Published counters ---------------------------------------------- */
+
+.gp-about__stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  max-width: 68ch;
+  margin-top: 2.25rem;
+  background-color: var(--gp-border);
+  border: 1px solid var(--gp-border);
+  border-radius: var(--gp-radius);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .gp-about__stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.gp-about__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.15rem 1.25rem;
+  background-color: var(--gp-paper);
+}
+
+.gp-about__stat-value {
+  font-family: var(--gp-font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--gp-green);
+}
+
+.gp-about__stat-label {
+  font-size: var(--gp-fs-micro);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gp-muted);
+}
+
+/* --- Body copy -------------------------------------------------------- */
+
+.gp-about__prose {
+  max-width: 68ch;
+  margin-top: 2rem;
+  font-size: 1.06rem;
+  line-height: var(--gp-lh-body);
+}
+
+.gp-about__prose p {
+  margin: 0 0 1.25rem;
+}
+
+/* --- Links and source ------------------------------------------------- */
+
+.gp-about__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  max-width: 68ch;
+  margin-top: 2.25rem;
+}
+
+.gp-about__foot {
+  max-width: 68ch;
+  margin-top: 2.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gp-border);
+}

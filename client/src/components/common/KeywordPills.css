@@ -1,0 +1,45 @@
+/* =====================================================================
+   KeywordPills.css — muted tag pills with a green hover state.
+   ===================================================================== */
+
+.gp-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gp-pill {
+  display: inline-block;
+  background-color: var(--gp-tag-bg);
+  color: var(--gp-muted);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: var(--gp-fs-micro);
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 0.24rem 0.65rem;
+  white-space: nowrap;
+}
+
+.gp-pill--link {
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.gp-pill--link:hover {
+  background-color: var(--gp-green-light);
+  border-color: var(--gp-green-accent);
+  color: var(--gp-green);
+  text-decoration: none;
+}
+
+.gp-pill--more {
+  background-color: transparent;
+  border-color: var(--gp-border);
+  color: var(--gp-muted);
+  font-weight: 500;
+}

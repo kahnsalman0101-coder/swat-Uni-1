@@ -1,0 +1,186 @@
+/* =====================================================================
+   global.css — page shell, base typography, shared primitives.
+   ===================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--gp-off-white);
+  color: var(--gp-ink);
+  font-family: var(--gp-font-sans);
+  font-size: var(--gp-fs-body);
+  line-height: var(--gp-lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+.gp-serif {
+  font-family: var(--gp-font-serif);
+  color: var(--gp-ink);
+  line-height: var(--gp-lh-tight);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--gp-fs-display);
+}
+h2 {
+  font-size: var(--gp-fs-h2);
+}
+h3 {
+  font-size: var(--gp-fs-h3);
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--gp-green-accent);
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+a:hover {
+  color: var(--gp-green);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Visible, high-contrast focus ring everywhere (WCAG 2.2 AA). */
+:focus-visible {
+  outline: 2px solid var(--gp-red);
+  outline-offset: 2px;
+  border-radius: var(--gp-radius-sm);
+}
+
+/* --- Layout primitives ------------------------------------------------ */
+
+.gp-container {
+  width: 100%;
+  max-width: var(--gp-container);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.gp-page {
+  min-height: 60vh;
+  padding-bottom: 4.5rem;
+}
+
+.gp-section {
+  padding-block: 3.5rem;
+}
+
+.gp-section--tinted {
+  background-color: var(--gp-green-light);
+}
+
+.gp-section--paper {
+  background-color: var(--gp-paper);
+}
+
+/* Red rule that sits above section titles — the recurring red accent. */
+.gp-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--gp-font-sans);
+  font-size: var(--gp-fs-micro);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gp-red);
+  margin-bottom: 0.85rem;
+}
+
+.gp-eyebrow::before {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 3px;
+  background-color: var(--gp-red);
+  border-radius: 2px;
+}
+
+.gp-lede {
+  color: var(--gp-muted);
+  font-size: 1.08rem;
+  max-width: 62ch;
+}
+
+.gp-muted {
+  color: var(--gp-muted);
+}
+
+.gp-small {
+  font-size: var(--gp-fs-small);
+}
+
+/* --- Surfaces --------------------------------------------------------- */
+
+.gp-card {
+  background-color: var(--gp-paper);
+  border: 1px solid var(--gp-border);
+  border-radius: var(--gp-radius-lg);
+  box-shadow: var(--gp-shadow-sm);
+}
+
+.gp-divider {
+  height: 1px;
+  background-color: var(--gp-border);
+  border: 0;
+  margin-block: 1.75rem;
+}
+
+.gp-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1080;
+  background-color: var(--gp-red);
+  color: var(--gp-paper);
+  padding: 0.65rem 1.1rem;
+  border-radius: 0 0 var(--gp-radius) 0;
+  font-weight: 600;
+}
+
+.gp-skip-link:focus {
+  left: 0;
+  text-decoration: none;
+  color: var(--gp-paper);
+}
+
+/* Screen-reader-only helper (Bootstrap ships one, this keeps us independent). */
+.gp-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

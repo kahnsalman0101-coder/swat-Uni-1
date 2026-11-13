@@ -1,0 +1,140 @@
+/* =====================================================================
+   SiteFooter.css — primary green footer with a darker bottom strip.
+   ===================================================================== */
+
+.site-footer {
+  margin-top: auto;
+  background-color: var(--gp-green);
+  color: var(--gp-paper);
+}
+
+.site-footer__top {
+  padding-block: 3.25rem 2.5rem;
+}
+
+.site-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.9rem;
+}
+
+.site-footer__crest {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--gp-radius);
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  font-size: 1.1rem;
+  flex: 0 0 auto;
+}
+
+.site-footer__wordmark {
+  font-family: var(--gp-font-serif);
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.2;
+  max-width: 15ch;
+}
+
+.site-footer__motto {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: var(--gp-fs-small);
+  font-style: italic;
+  max-width: 40ch;
+  margin: 0 0 1rem;
+}
+
+.site-footer__address {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: var(--gp-fs-small);
+  font-style: normal;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.site-footer__heading {
+  font-family: var(--gp-font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+  margin-bottom: 1rem;
+}
+
+.site-footer__heading--spaced {
+  margin-top: 1.65rem;
+}
+
+.site-footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer__list--split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem 1rem;
+}
+
+.site-footer__link {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--gp-fs-small);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.site-footer__link:hover {
+  color: var(--gp-paper);
+  border-bottom-color: var(--gp-red);
+  text-decoration: none;
+}
+
+.site-footer__contact {
+  margin: 0.85rem 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: var(--gp-fs-small);
+}
+
+.site-footer__contact i {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* --- Darker bottom strip --------------------------------------------- */
+
+.site-footer__strip {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: var(--gp-green-dark);
+}
+
+.site-footer__strip-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-block: 1.1rem;
+}
+
+.site-footer__copyright {
+  margin: 0;
+  font-size: var(--gp-fs-micro);
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 70ch;
+}
+
+.site-footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
